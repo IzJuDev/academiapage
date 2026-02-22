@@ -9,17 +9,56 @@
 
 <body>
 
-    <h1>Minha Vitrine de Produtos</h1>
+    <h1>Produtos</h1>
 
-    <div class="form">
-        <input type="text" id="linkInput" placeholder="Cole o link do produto">
-        <input type="text" id="imgInput" placeholder="Cole o link da imagem">
-        <button onclick="adicionarProduto()">Adicionar</button>
+    <div class="grid">
+
+        <!-- PRODUTO 1 -->
+        <div class="card">
+            <img src="img/creatina.webp">
+            <a href="https://link-do-produto.com" target="_blank">
+                <button>Ver Produto</button>
+            </a>
+        </div>
+
+        <!-- PRODUTO 2 -->
+        <div class="card">
+            <img src="img/whei.webp">
+            <a href="https://link-do-produto.com" target="_blank">
+                <button>Ver Produto</button>
+            </a>
+        </div>
+
     </div>
 
-    <div id="listaProdutos" class="grid"></div>
-
-    <script src="script.js"></script>
 </body>
 
+<!-- BOTÃO GALERIA -->
+<button class="btn-galeria" onclick="abrirGaleria()">📸 Galeria</button>
+
+<!-- MODAL DA GALERIA -->
+<div id="galeriaModal" class="modal">
+  <div class="modal-content">
+    <span class="fechar" onclick="fecharGaleria()">✖</span>
+
+    <h2>Treinos</h2>
+
+    <div class="galeria-grid">
+      <img src="img/treino/Costas.jpeg">
+      <img src="img/treino/peito.jpeg">
+      <img src="img/treino/pernas.jpeg">
+    </div>
+
+  </div>
+</div>
+
 </html>
+<script>
+    function abrirGaleria() {
+        document.getElementById("galeriaModal").style.display = "block";
+    }
+
+    function fecharGaleria() {
+        document.getElementById("galeriaModal").style.display = "none";
+    }
+</script>
